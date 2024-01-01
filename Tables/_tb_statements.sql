@@ -23,3 +23,4 @@ CREATE TABLE _tb_statements (
 		ON DELETE SET NULL
 )
 
+CREATE NONCLUSTERED INDEX NI_tb_statements_code ON _tb_statements (code)

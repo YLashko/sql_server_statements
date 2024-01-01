@@ -63,8 +63,25 @@ BEGIN
 		IF @dataset_id IS NULL BREAK
 	END
 
-	/*SELECT ts.id,
-		ts.id_statement,
+	INSERT INTO temp_statements (
+		id_section,
+		id_template,
+		code,
+		display_text,
+		font_size,
+		padding_up,
+		padding_right,
+		padding_bottom,
+		padding_left,
+		text_align,
+		bold,
+		underline,
+		italic,
+		sort_order,
+		filled_text,
+		id_dataset
+	)
+	SELECT
 		ts.id_section,
 		ts.id_template,
 		ts.code,
@@ -79,6 +96,7 @@ BEGIN
 		ts.underline,
 		ts.italic,
 		ts.sort_order,
-		ts.sql_filler
-	FROM #temp_statement ts*/
+		ts.display_text,
+		ts.id_dataset
+	FROM #temp_statement ts
 END

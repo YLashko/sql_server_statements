@@ -8,3 +8,5 @@ CREATE TABLE _tb_statements_parts (
 		ON UPDATE CASCADE
 		ON DELETE SET NULL
 )
+
+CREATE NONCLUSTERED INDEX NI_tb_statements_parts_variable_name ON _tb_statements_parts (variable_name) 

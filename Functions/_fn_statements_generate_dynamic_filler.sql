@@ -1,4 +1,4 @@
-ALTER FUNCTION _fn_statements_generate_dynamic_filler (@id_statement INT, @dataset_name NVARCHAR(250))
+CREATE FUNCTION _fn_statements_generate_dynamic_filler (@id_statement INT, @dataset_name NVARCHAR(250))
 RETURNS NVARCHAR(MAX)
 AS
 BEGIN
